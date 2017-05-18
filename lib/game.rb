@@ -6,9 +6,12 @@ class Game
     @grid = initial_grid
   end
 
-  private
+  def play(vertical_axis, horizontal_axis, player)
+    grid[vertical_axis][horizontal_axis] = player
+  end
 
+  private
   def initial_grid
-    [[nil] * 3] * 3
+    [[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]]
   end
 end
